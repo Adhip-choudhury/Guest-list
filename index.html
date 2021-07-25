@@ -1,0 +1,33 @@
+<html>
+    <head>    <title>Guest list</title>
+</head>
+<body>
+    <center>
+    <h3>Guest list</h3>
+    <input id="namesd" placeholder="plz enter the name">&nbsp;<button onclick="add()">Sumbit</button>
+    <hr>
+    <p id="names"></p>
+    <hr>
+
+    
+    <button onclick="SORT()">Sort</button>
+    <hr>
+    <p id="SORTe"></p>
+</center>
+</body>
+<script>
+    var namesofguest=document.getElementById("namesd").value;
+    var names_of_guest=[];
+    function add(){
+        namesofguest=document.getElementById("namesd").value;
+        names_of_guest.push(namesofguest)
+     document.getElementById("names").innerHTML=names_of_guest;
+
+     
+function SORT(){
+    names_of_guest.sort();
+    document.getElementById("SORTe").innerHTML=names_of_guest;
+}
+    }
+</script>
+</html>
